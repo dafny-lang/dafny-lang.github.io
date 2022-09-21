@@ -1,0 +1,27 @@
+FAQLoopModifies.md
+
+
+- ["TODO: I’m having an issue with generics"] -- 6/5/2021
+- [TODO - Sorting, iteration 12/1/2021]
+- TODO Refinement - 6/24/2022, 6/30/2022,  #yucca 6/24/2022
+- ["I can prove `!("a" <= "b")` but not `!("a" < "b")`, for `a` and `b` strings. Why is that?] 5/13/2022 TODO --- can't find this one back
+- ["How do I manually run a program compiled to Go?"] TODO
+- ["When I try to compile and run the .java file produced by Dafny, I get errors about missing packages. Where are they?"](FAQJava)
+
+Add example to FAQTriggers.md of a user supplied trigger.
+Add example to FAQReadFile.md
+Say more in FAQIntegratingWithJava.md
+Add detail to FAQStyle.md, includig where linter ideas are collected
+Add descrip0tions of report generator, pipeline, runtime (on FAQNuget.md)
+
+Fix any keywords with ` `
+FIx ```dafny where dafny is missing
+
+Extract FAQ examples to testable include files
+
+Finished #dafny, #dafny-development, #yucca through 7/31
+
+Check #yucca-compiler
+
+https://broadcast.amazon.com/videos/394258
+
