@@ -1,1 +1,1 @@
-Pre-3.8.1 snapshot
+Pre-3.8.2 snapshot
