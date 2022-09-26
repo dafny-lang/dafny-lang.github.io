@@ -1,5 +1,13 @@
-## Favicon
+---
+layout: default
+---
 
-The file `dafny-favicon.svg` and the file  `dafny/dafny-favicon.svg` are the same.
-The first one is used to render the favicon on the website when built locally, whereas the second is used on the online built website online.
-We don't know yet why the paths have to be different.
+## Snapshots of documentation
+
+The current development work and git history of documentation is in the `dafny-lang//dafny` repository, in the `docs`
+folder.
+
+This `dafny-lang/dafny.github.io` repo is the target for `https://dafny.org` and is the entry point to all the user-facing
+documentation about Dafny. What is here is a _snapshot of the documentation at the time of the latest release_.
+There are also links (at `https://dafny.org/snapshots) to all of the past snapshots since this process began (with v3.8.2).
+Each old snapshot is in its own folder, named vX.Y.Z corresponding to its version.
