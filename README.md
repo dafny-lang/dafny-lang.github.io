@@ -4,7 +4,7 @@ layout: default
 
 ## Snapshots of documentation
 
-The current development work and git history of documentation is in the `dafny-lang//dafny` repository, in the `docs`
+The current development work and git history of documentation is in the `dafny-lang/dafny` repository, in the `docs`
 folder.
 
 This `dafny-lang/dafny.github.io` repo is the target for `https://dafny.org` and is the entry point to all the user-facing
