@@ -1,0 +1,52 @@
+#! /usr/bin/env bash
+
+if [ "$#" != "1" ]; then
+  echo Expected the new version number as the one argument
+  exit 1
+fi
+
+## The version name
+V=$1
+## Location of the dafny-lang.github.io repo
+T=../../dafny-lang.github.io
+if [ ! -e "$T" ]; then
+  echo Expecting the dafny-lang.github.io repo to be parallel to the dafny repo
+  echo Nothing exists at $T
+  exit 1
+fi
+exi 0
+## Text string in index.html that marks where to put the version text
+M="<!-- VERSION INFO HERE-->"
+## Branch name
+B=`echo snapshot-$V | sed -e "s/\./_/g"`
+
+## Location of the development docs folder
+D=$(dirname "$BASH_SOURCE")
+cd "$D"
+
+echo Executing from $D
+echo Target is $T
+echo Version is $V
+echo Branch is $B
+
+if [ -e $T/$V ]; then
+  echo FAILURE: $T/$V already exists; exit 1;
+fi
+
+(cd $T && git checkout cok-snapshots && git checkout -b $B && git push -u origin $B ) || (echo FAILED to create target branch; exit 1)
+
+cp -r . $T/$V || ( echo copy FAILED; exit 1 )
+
+rm $T/$V/DafnyRef/version.txt
+echo $V > $T/$V/DafnyRef/version.txt
+
+grep -q "$M" $T/$V/index.html || (echo FAILED: No Version marker line in $T/$V/index.html ; exit 1 )
+
+sed -i -e "s/$M.*/$M$V documentation snapshot/" $T/$V/index.html || (echo Version replacement FAILED; exit 1; )
+
+echo "- [$V](https://davidcok.github.io/dafny-lang.github.io/$V)" >> $T/Snapshots.md
+
+cat latest-template | sed -e "s/VERSION/$V/g" > $T/latest.html
+
+(cd $T && git add Snapshots.md latest.html $V && git commit -m "Documentation snapshot for $V" && git push --verbose origin $B ) ||\
+	( echo FAILED to commit or push the snapshot ; exit 1  )
