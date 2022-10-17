@@ -3,6 +3,7 @@
 ## The version name
 V=v3.9.0draft
 ## Location of the dafny-lang.github.io repo
+## FIXME
 T=/Users/davidcok/projects/dafny/dafny-lang.github.io
 ## Text string in index.html that marks where to put the version text
 M="<!-- VERSION INFO HERE-->"
