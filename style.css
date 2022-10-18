@@ -13,7 +13,6 @@ h1 {
 
 #logo {
     width: 100%;
-    margin: 1em 0;
 }
 
 @media (min-width: 25em) {
@@ -37,19 +36,26 @@ nav ul {
     margin: 0;
 }
 
-@media (min-width: 95em) {
+@media (min-width: 67em) {
+    body {
+        max-width: 65em;
+    }
+
     nav {
         float: right;
-        margin-right: -25em;
         margin-top: 0;
         position: sticky;
-        width: 22.5em;
         top: 1em;
+        width: 22.5em;
     }
 
     nav h2 {
         margin-top: 0;
         margin-left: 0.5em;
+    }
+
+    main {
+        margin-right: 22.5em;
     }
 }
 
