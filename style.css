@@ -3,6 +3,7 @@ body {
     max-width: 40em;
     margin: auto;
     padding: 1em;
+    position: relative;
     line-height: 1.5;
 }
 
@@ -21,6 +22,34 @@ h1 {
         margin: 0 1em 0.5em 0;
         max-width: 100%;
         width: 10em;
+    }
+}
+
+nav {
+    margin: 1.35em 0;
+}
+
+nav h2 {
+    margin-bottom: 0.5em;
+}
+
+nav ul {
+    margin: 0;
+}
+
+@media (min-width: 95em) {
+    nav {
+        float: right;
+        margin-right: -25em;
+        margin-top: 0;
+        position: sticky;
+        width: 22.5em;
+        top: 1em;
+    }
+
+    nav h2 {
+        margin-top: 0;
+        margin-left: 0.5em;
     }
 }
 
