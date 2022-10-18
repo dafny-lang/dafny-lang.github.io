@@ -1,8 +1,9 @@
 body {
     font-family: ui-sans-serif, sans-serif;
-    max-width: 40rem;
+    max-width: 40em;
     margin: auto;
     padding: 1em;
+    line-height: 1.5;
 }
 
 h1 {
