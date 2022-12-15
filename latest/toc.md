@@ -66,6 +66,6 @@ And some books:
 
 Preliminary notes about Dafny integration with code in other programming languages:
    * [Go](Compilation/Go)
-   * [C++](Compilation/Cpp)
+   * [Boogie](Compilation/Boogie)
    * [Reference values](Compilation/ReferenceTypes)
    * [Automatic Initialization of Variables](Compilation/AutoInitialization)
