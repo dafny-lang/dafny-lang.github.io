@@ -1056,11 +1056,7 @@ implementation.
   `arr.Length`, or sequence length, etc. in executable code.  You can however,
   use `arr.Length as uint64` if you can prove your array is an appropriate
   size.  The compiler will report inappropriate integer use.
-<<<<<<< HEAD
 - The C++ compiler does not support more advanced Dafny features like traits or coinductive
-=======
-- We do not support more advanced Dafny features like traits or coinductive
->>>>>>> main
   types.
 - There is very limited support for higher order functions even for array initialization.  Use
   extern definitions like newArrayFill (see 
